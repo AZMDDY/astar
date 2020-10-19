@@ -9,3 +9,5 @@ add_compile_options(-Wall -Werror)
 include_directories(include/)
 
 add_executable(astar main.cpp)
+
+add_executable(play play/play.cpp)
