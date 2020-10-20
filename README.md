@@ -29,6 +29,12 @@ A*（念做：A Star）算法是一种很常用的路径查找和图形遍历算
 
 ## 演示
 
-+ play.cpp: 利用ASCII控制字符在终端显示地图；
++ play.hpp/.cpp: 利用ASCII控制字符在终端动态显示路径查找结果；
++ test/test.cpp: 在地图上生成随机障碍、起点和终点进行路径查找测试，并在终端动态显示结果；
 
+play:
 ![](https://raw.githubusercontent.com/AZMDDY/imgs/master/tutieshi_640x288_16s.gif)
+
+
+test:
+![](https://raw.githubusercontent.com/AZMDDY/imgs/master/20201020233447.png)
