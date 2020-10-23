@@ -15,6 +15,7 @@ class Map {
 public:
     Map() : m(0), n(0) {}
     Map(const std::vector<std::vector<int>>& map);
+    Map(int w, int h);
     Map(const Map& m) = default;
     ~Map() = default;
 
@@ -39,6 +40,15 @@ Map::Map(const std::vector<std::vector<int>>& map)
     this->map = map;
     n = this->map.size();
     m = (n > 0 ? this->map[0].size() : 0);
+}
+
+Map::Map(int w, int h)
+{
+    n = h;
+    m = w;
+    n = (n > 0 ? n : 0);
+    m = (m > 0 ? m : 0);
+    this->map = std::vector<std::vector<int>>(n, std::vector<int>(m, 0));
 }
 
 inline int Map::At(int x, int y)

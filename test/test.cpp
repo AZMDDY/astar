@@ -35,6 +35,9 @@ void GenBarrier(Map& map)
 
 void GenStartAndEnd(Map& map, Point& start, Point& end)
 {
+    if (map.Empty()) {
+        return;
+    }
     for (uint32_t i = 0; i < 2;) {
         auto point = MapRandPoint(map.Height(), map.Width());
         if (map.At(point) == 0) {
@@ -62,8 +65,7 @@ int main(int argc, char** argv)
     std::cin >> mapWidth;
     std::cout << "map height: ";
     std::cin >> mapHeight;
-    std::vector<std::vector<int>> mapV(mapHeight, std::vector<int>(mapWidth, 0));
-    Map maze(mapV);
+    Map maze(mapWidth, mapHeight);
 
     GenBarrier(maze);
 
